@@ -1,0 +1,17 @@
+.Logo {
+  width: 70px;
+}
+.Logo img {
+  width: 100%;
+  height: auto;
+}
+@media(min-width: 500px) {
+  .Logo {
+    width: 90px;
+  }
+}
+@media(min-width: 768px) {
+  .Logo {
+    width: 124px;
+  }
+}

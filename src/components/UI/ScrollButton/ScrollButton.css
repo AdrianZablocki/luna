@@ -1,0 +1,50 @@
+.ScrollBtn {
+  position: absolute;
+  left: 50%;
+  bottom: 80px;
+  transform: translateX(-50%);
+}
+.ScrollBtn span {
+  display: block;
+  width: 15px;
+  height: 15px;
+  transform: rotate(-45deg);
+}
+.Scroll1{
+  border-bottom: 2px solid rgb(207, 210, 255);
+  border-left: 2px solid rgb(207, 210, 255); 
+  opacity: 0.3;
+  animation: changeColor 3s linear infinite; 
+}
+.Scroll2{
+  border-bottom: 2px solid rgb(207, 210, 255);
+  border-left: 2px solid rgb(207, 210, 255);
+  opacity: 0.3;
+  animation: changeColor 3s linear infinite; 
+  animation-delay: 1s;
+}
+.Scroll3{
+  border-bottom: 2px solid rgb(207, 210, 255);
+  border-left: 2px solid rgb(207, 210, 255);
+  opacity: 0.3;
+  animation: changeColor 3s linear infinite; 
+  animation-delay: 2s;
+}
+@keyframes changeColor {
+  0% {
+    border-bottom: 2px solid rgb(207, 210, 255);
+    border-left: 2px solid rgb(207, 210, 255);
+  }
+  33% {
+    border-bottom: 2px solid rgb(0, 0, 0);
+    border-left: 2px solid rgb(0, 0, 0);
+  }
+  66% {
+    border-bottom: 2px solid rgb(235, 48, 77);
+    border-left: 2px solid rgb(235, 48, 77);
+  }
+  100% {
+    border-bottom: 2px solid rgb(207, 210, 255);
+    border-left: 2px solid rgb(207, 210, 255);
+  }
+}

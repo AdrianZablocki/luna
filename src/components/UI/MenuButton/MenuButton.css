@@ -1,0 +1,44 @@
+.MenuBtn {
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  color:  #ffffff;
+  font-size: 1.125rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  padding: 5px;
+  cursor: pointer;
+}
+.BarsWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+.TopBar,
+.BottomBar,
+.MidleBar {
+  position: relative;
+  background-color:  #4ca9ff;
+  width: 20px;
+  height: 2px;
+  opacity: 1;
+  visibility: visible;
+  transition: all 200ms ease;
+}
+.MidleBar {
+  width: 16px;
+  margin: 5px 0;
+}
+.Active.TopBar {
+  transform-origin: 0% 0%;
+  transform: rotate(45deg);
+  left: 0.5px;
+}
+.Active.MidleBar {
+  opacity: 0;
+  visibility: hidden;
+}
+.Active.BottomBar {
+  transform-origin: 0% 0%;
+  transform: rotate(-45deg);
+  right: 0.5px;
+}

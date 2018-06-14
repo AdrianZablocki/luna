@@ -1,0 +1,25 @@
+.Jumbotron {
+  position: absolute;
+  font-family: 'Roboto', sans-serif;
+  color:  #ffffff;
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.Jumbotron span {
+  color: #4ba9ff;
+}
+@media(min-width: 768px) {
+  .Jumbotron {
+    font-size: 3.625rem;
+  }
+}
+@media(min-width: 992px) {
+  .Jumbotron {
+    font-size: 5.625rem;
+  }
+}

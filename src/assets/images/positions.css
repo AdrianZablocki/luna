@@ -1,0 +1,24 @@
+.bg-promote_grey {
+  width: 191px; height: 151px;
+  background: url('css_sprites.png') -221px -10px;
+}
+.bg-promote_blue {
+  width: 191px; height: 151px;
+  background: url('css_sprites.png') -10px -10px;
+}
+.bg-development_grey {
+  width: 206px; height: 124px;
+  background: url('css_sprites.png') -432px -10px;
+}
+.bg-development_blue {
+  width: 206px; height: 124px;
+  background: url('css_sprites.png') -10px -181px;
+}
+.bg-design_grey {
+  width: 161px; height: 155px;
+  background: url('css_sprites.png') -191px -325px;
+}
+.bg-design_blue {
+  width: 161px; height: 155px;
+  background: url('css_sprites.png') -10px -325px;
+}
