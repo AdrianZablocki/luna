@@ -5,6 +5,14 @@
   width: 100%;
   padding: 20px 15px;
   box-sizing: border-box;
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; */
+  z-index: 100;
+}
+.Links {
+  padding: 20px;
 }
 @media(min-width: 768px) {
   .NavBar {

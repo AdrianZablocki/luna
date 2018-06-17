@@ -1,5 +1,7 @@
+import { connect } from 'react-redux';
 import React, { Component } from 'react';
 
+import * as actions from '../../store/actions/index';
 import Jumbotron from '../../components/Jumbotron/Jumbotron';
 import Navigation from '../../components/Navigation/Navigation';
 import ScrollBtn from '../../components/UI/ScrollButton/ScrollButton';
@@ -13,16 +15,7 @@ class Header extends Component {
       beforeTxt: 'We make ',
       txt: 'Web ',
       afterTxt: 'better'
-    },
-    openMenu: false,
-    backdropShow: false
-  }
-
-  openMenuHandler = (prevState) => {
-    this.setState(prevState => ({
-      openMenu: !prevState.openMenu,
-      backdropShow: !prevState.backdropShow
-    }));
+    }
   }
 
   render() {
@@ -30,18 +23,32 @@ class Header extends Component {
       <header className={classes.Header}>
         <Navigation 
           text="Menu" 
-          transform={this.state.openMenu} 
-          clicked={this.openMenuHandler}
-          show={this.state.backdropShow} />
+          transform={this.props.menu.openMenu} 
+          clicked={this.props.onOpenMenu}
+          show={this.props.menu.backdropShow}
+        />
         <Jumbotron
           before={this.state.jumbotron.beforeTxt}
           text={this.state.jumbotron.txt}
-          after={this.state.jumbotron.afterTxt} />
+          after={this.state.jumbotron.afterTxt} 
+        />
         <ScrollBtn />         
       </header>
     );
   }
 }
 
+const mapStateToProps = state => {
+  return {
+    menu: state.menu
+  }
+};
 
-export default Header;
+const mapDispatchToProps = dispatch => {
+  return {
+    onOpenMenu: () => dispatch(actions.openMenu())
+  }
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

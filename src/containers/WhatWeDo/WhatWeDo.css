@@ -1,0 +1,53 @@
+.WhatWeDo {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px 15px;
+}
+.WhatWeDoWrapper {
+  background-color: #FFF;
+}
+
+
+.WhatWeDo h2 {
+  font-family: 'Roboto', sans-serif;
+  color:  #40485a;
+  font-size: 48px;
+  font-weight: 300;
+  padding: 20px 0 50px 0;
+  position: relative;
+  text-align: center;
+}
+.WhatWeDo h2:before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  background-color:  #4a24a8;
+  width: 80px;
+  height: 3px;
+}
+@media(min-width: 768px) {
+  .WhatWeDo {
+    display: flex;
+    justify-content: center;
+    width: 750px;
+    margin: 0 auto;
+    padding: 100px 0;
+  }
+
+  .WhatWeDo h2 {
+    padding-top: 0;
+  }
+}
+@media(min-width: 992px) {
+  .WhatWeDo {
+    width: 970px;
+  }
+}
+@media(min-width: 1200px) {
+  .WhatWeDo {
+    width: 1170px;
+  }
+}
