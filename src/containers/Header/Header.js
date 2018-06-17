@@ -26,6 +26,7 @@ class Header extends Component {
           transform={this.props.menu.openMenu} 
           clicked={this.props.onOpenMenu}
           show={this.props.menu.backdropShow}
+          fixed={this.props.fixed}
         />
         <Jumbotron
           before={this.state.jumbotron.beforeTxt}
@@ -49,6 +50,5 @@ const mapDispatchToProps = dispatch => {
     onOpenMenu: () => dispatch(actions.openMenu())
   }
 }
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);

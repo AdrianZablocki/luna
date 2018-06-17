@@ -50,20 +50,27 @@ class Navigation extends Component {
       />
     });
 
-    return(   
-      <div className={classes.NavBar}>
-        <Logo />   
-        <MenuBtn 
-          text={this.props.text} 
-          transform={this.props.transform} 
-          clicked={this.props.clicked} /> 
-          {this.props.children}
-        <Backdrop show={this.props.show} clicked={this.props.clicked}>
-          <ul className={classes.Links}>
-            {links}
-          </ul>
-        </Backdrop>   
-      </div>
+
+    const menuWrapperClasses = [
+      this.props.fixed ? classes.NavBarWrapper : null
+    ]
+
+    return( 
+      <div className={menuWrapperClasses.join(' ')}>
+        <div className={classes.NavBar}>
+          <Logo />   
+          <MenuBtn 
+            text={this.props.text} 
+            transform={this.props.transform} 
+            clicked={this.props.clicked} /> 
+            {this.props.children}
+          <Backdrop show={this.props.show} clicked={this.props.clicked}>
+            <ul className={classes.Links}>
+              {links}
+            </ul>
+          </Backdrop>   
+        </div>        
+      </div>  
     )
   }
 };
