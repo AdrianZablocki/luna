@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import * as actions from '../../store/actions/index';
 import Jumbotron from '../../components/Jumbotron/Jumbotron';
 import Navigation from '../../components/Navigation/Navigation';
-import ScrollBtn from '../../components/UI/ScrollButton/ScrollButton';
+// import ScrollBtn from '../../components/UI/ScrollButton/ScrollButton';
 
 import classes from './Header.css';
 
@@ -33,7 +33,7 @@ class Header extends Component {
           text={this.state.jumbotron.txt}
           after={this.state.jumbotron.afterTxt} 
         />
-        <ScrollBtn />         
+        {this.props.children}
       </header>
     );
   }

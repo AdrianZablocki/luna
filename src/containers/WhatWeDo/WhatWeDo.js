@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import classes from './WhatWeDo.css';
 import icons from '../../assets/images/icons_sprites.png';
 
-class About extends Component {
+class WhatWeDo extends Component {
   state = {
     header: 'What we do',
     icons: icons,
@@ -36,10 +36,10 @@ class About extends Component {
           <p>{el.text}</p>
         </div>
       )
-    })
+    });
 
     return (
-      <section className={classes.WhatWeDo}>
+      <section className={classes.WhatWeDoWrapper}>
         <div className={classes.WhatWeDoContainer}>
           <h2>{this.state.header}</h2>
         </div>
@@ -51,4 +51,4 @@ class About extends Component {
   }
 }
 
-export default About;
+export default WhatWeDo;

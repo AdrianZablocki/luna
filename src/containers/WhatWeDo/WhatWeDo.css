@@ -1,11 +1,11 @@
+.WhatWeDoWrapper {
+  background-color: #FFF;
+}
 .WhatWeDoContainer,
 .PanelsContainer {
   width: 100%;
   box-sizing: border-box;
   padding: 20px 15px;
-}
-.WhatWeDo {
-  background-color: #FFF;
 }
 .WhatWeDoContainer h2 {
   font-family: 'Roboto', sans-serif;
@@ -76,7 +76,7 @@
   .PanelsContainer {
     display: flex;
     justify-content: center;
-    width: 750px;
+    width: 720px;
     margin: 0 auto;
     padding: 100px 0;
   }
@@ -90,7 +90,7 @@
 @media(min-width: 992px) {
   .WhatWeDoContainer,
   .PanelsContainer {
-    width: 970px;
+    width: 962px;
   }
   .Panel {
     width: 30%;

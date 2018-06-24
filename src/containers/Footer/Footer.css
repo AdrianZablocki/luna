@@ -1,0 +1,27 @@
+.FooterContainer {
+  width: 100%;
+  padding: 20px 15px;
+  box-sizing: border-box;
+}
+
+@media(min-width: 768px) {
+  .FooterWrapper {
+    background: url('../../assets/images/portfolio_bg.jpg') center center no-repeat;
+    background-size: cover;
+  }
+  .FooterContainer {
+    width: 720px;
+    margin: 0 auto;
+    padding: 100px 0;
+  }
+}
+@media(min-width: 992px) {
+  .FooterContainer {
+    width: 962px;
+  }
+}
+@media(min-width: 1200px) {
+  .FooterContainer {
+    width: 1170px;
+  }
+}

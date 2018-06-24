@@ -2,6 +2,7 @@
   position: absolute;
   left: 50%;
   bottom: 80px;
+  cursor: pointer;
   transform: translateX(-50%);
 }
 .ScrollBtn span {

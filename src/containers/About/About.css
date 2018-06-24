@@ -1,16 +1,16 @@
 .AboutWrapper {
   background: #fff;
 }
-.About {
+.AboutContainer {
   width: 100%;
   padding: 20px 15px;
   box-sizing: border-box;
 }
-.About h2,
-.About div {
+.AboutContainer h2,
+.AboutContainer div {
   box-sizing: border-box;
 }
-.About div {
+.AboutContainer div {
   font-family: 'Roboto', sans-serif;
   color: #6a707d;
   font-size: 18px;
@@ -18,10 +18,10 @@
   line-height: 30px;
   text-align: left;
 }
-.About p {
+.AboutContainer p {
   padding-bottom: 30px;
 }
-.About h2 {
+.AboutContainer h2 {
   font-family: 'Roboto', sans-serif;
   color:  #40485a;
   font-size: 48px;
@@ -29,7 +29,7 @@
   padding: 20px 0 50px 0;
   position: relative;
 }
-.About h2:before {
+.AboutContainer h2:before {
   content: '';
   display: inline-block;
   position: absolute;
@@ -51,28 +51,28 @@
   height: 100%;
 }
 @media(min-width: 768px) {
-  .About {
+  .AboutContainer {
     display: flex;
     align-items: flex-start;
-    width: 750px;
+    width: 720px;
     margin: 0 auto;
     padding: 100px 0;
   }
-  .About div {
+  .AboutContainer div {
     width: 58.333%;
   }
-  .About h2 {
+  .AboutContainer h2 {
     width: 41.66%; 
     padding-top: 0;
   }
 }
 @media(min-width: 992px) {
-  .About {
-    width: 970px;
+  .AboutContainer {
+    width: 962px;
   }
 }
 @media(min-width: 1200px) {
-  .About {
+  .AboutContainer {
     width: 1170px;
   }
 }

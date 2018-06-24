@@ -7,7 +7,11 @@ import * as actions from '../../store/actions/index';
 import About from '../../containers/About/About';
 import Aux from '../Aux/Aux';
 import Header from '../../containers/Header/Header';
+import ScrollBtn from '../../components/UI/ScrollButton/ScrollButton';
 import WhatWeDo from '../../containers/WhatWeDo/WhatWeDo';
+import Portfolio from '../../containers/Portfolio/Portfolio';
+//import TwitterSlider from '../../containers/TwitterSlider/TwitterSlider';
+import Footer from '../../containers/Footer/Footer';
 
 class Layout extends Component {
   state = {
@@ -61,12 +65,19 @@ class Layout extends Component {
   render() {
     return (
       <Aux>
-        <Header ref={(section) => { this.Top = section; }} fixed={this.state.stickyScroll}/>
+        <Header ref={(section) => { this.Top = section; }} fixed={this.state.stickyScroll}>
+          <ScrollBtn 
+            clicked={() => scrollToComponent(this.About, { offset: 0, align: 'top', duration: 600 })} 
+          />
+        </Header>
         <About ref={(section) => { this.About = section; }} />
         <WhatWeDo ref={(section) => { this.What = section; }} />
-        <section ref={(section) => { this.Portfolio = section; }}>Portfolio</section>
-        <section ref={(section) => { this.Customers = section; }}>Tweets</section>
-        <footer ref={(section) => { this.Contact = section; }}>Contact</footer>
+        <Portfolio ref={(section) => { this.Portfolio = section; }} />
+
+        <section style={{height: '100px', background: '#FFF'}} ref={(section) => { this.Customers = section; }}>Tweets</section>
+
+        <Footer ref={(section) => { this.Contact = section; }} />
+        {/* <footer style={{height: '100px', background: 'white'}} ref={(section) => { this.Contact = section; }}>Contact</footer> */}
       </Aux>
     );
   }

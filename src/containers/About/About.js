@@ -50,7 +50,7 @@ class About extends Component {
 
     return (
       <section className={classes.AboutWrapper}>
-        <article className={classes.About}>        
+        <article className={classes.AboutContainer}>        
           <h2>{this.state.article.title}</h2>
           <div>
             <p>{this.state.article.text1}</p>
