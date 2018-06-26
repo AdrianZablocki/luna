@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 
 import classes from './WhatWeDo.css';
-import icons from '../../assets/images/icons_sprites.png';
 
 class WhatWeDo extends Component {
   state = {
     header: 'What we do',
-    icons: icons,
     panels: [
       {
         background: [classes.Design, classes.Icon],

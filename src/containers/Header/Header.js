@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 import * as actions from '../../store/actions/index';
 import Jumbotron from '../../components/Jumbotron/Jumbotron';
 import Navigation from '../../components/Navigation/Navigation';
-// import ScrollBtn from '../../components/UI/ScrollButton/ScrollButton';
 
 import classes from './Header.css';
 

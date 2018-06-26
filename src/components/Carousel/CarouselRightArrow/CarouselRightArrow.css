@@ -1,0 +1,20 @@
+.ArrowRight {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: transparent;
+  border: none;
+  border-top: 5px solid rgb(61, 198, 226);
+  border-right: 5px solid rgb(61, 198, 226);
+  position: absolute;
+  top: 50%;
+  right: 0;
+  outline: none;
+  cursor: pointer;
+  transform: translateY(-50%) rotate(45deg);
+}
+@media(min-width: 768px) {
+  .ArrowRight {
+    display: none;
+  }
+}

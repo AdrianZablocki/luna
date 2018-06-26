@@ -1,0 +1,47 @@
+.TweetWrapper {
+  display: inline-block;
+  width: 832px;
+  padding: 55px;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 60px 30px;
+  box-shadow: 0px 30px 60px 0px rgba(64, 72, 90, 0.15);
+}
+.Member,
+.Text,
+.MemberName,
+.MemberNick {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  line-height: 34px;
+}
+.Member,
+.MemberNick {
+  color:  #4ca9ff;
+}
+.Text,
+.MemberName {
+  color:  #40485a;
+  font-weight: 300;
+}
+.MemberName,
+.MemberNick  {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 32px;
+}
+.SignWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 45px;
+}
+.MemberWrapper {
+  padding: 0 15px;
+}
+.Avatar {
+  background: url('../../assets/images/avatar.jpg') center center no-repeat;
+  background-size: cover;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}

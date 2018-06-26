@@ -1,0 +1,11 @@
+.TwitterWrapper {
+  background: #FFF;
+  padding: 160px 0 90px 0;
+}
+.SliderContainer {
+  overflow: hidden;
+}
+
+.SliderWrapper {
+  position: relative;
+}

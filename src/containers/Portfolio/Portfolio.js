@@ -82,7 +82,7 @@ class Portfolio extends Component {
               </Slide>
     });
     tabs = this.state.slides.map((tab, index) => {
-      return  <Dot slide={index} className={classes.SliderButton}>
+      return  <Dot slide={index} key={index} className={classes.SliderButton}>
                 <div className={classes.SliderButtonTxt}>
                   <span className={classes.SliderButtonDeco}>{tab.tab.tabTxt}</span>
                   <span>{tab.tab.tabBla}</span>               
@@ -95,7 +95,7 @@ class Portfolio extends Component {
       <section className={classes.PortfolioWrapper}>
         <div className={classes.PortfolioContainer}>
 
-          <CarouselProvider totalSlides={this.state.slides.length} className={classes.CarouselContainer} >
+          <CarouselProvider totalSlides={this.state.slides.length} className={classes.CarouselContainer}>
             <Slider 
               classNameTrayWrap={classes.CarouselWrapper} 
               classNameTray={classes.Carousel} 
