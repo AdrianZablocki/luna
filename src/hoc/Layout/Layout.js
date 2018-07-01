@@ -19,6 +19,23 @@ class Layout extends Component {
   }
 
   componentDidUpdate() {
+    this.scrollToHandler();
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.stickyScrollHandler);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.stickyScrollHandler);
+  }
+
+  stickyScrollHandler = () => {
+    const header = ReactDOM.findDOMNode(this.About).getBoundingClientRect();
+    (header.top <= 76) ? this.setState({ stickyScroll: true }) : this.setState({ stickyScroll: false }); // menu bar height 76px
+  }
+
+  scrollToHandler = () => {
     switch (this.props.menu.componentId) {
       case 'Top':
         scrollToComponent(this.Top, { offset: 0, align: 'top', duration: 600 });
@@ -48,20 +65,6 @@ class Layout extends Component {
     };
   }
 
-  componentDidMount() {
-    window.addEventListener('scroll', this.stickyScrollHandler);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.stickyScrollHandler);
-  }
-
-  stickyScrollHandler = () => {
-    const header = ReactDOM.findDOMNode(this.About).getBoundingClientRect();
-    //menu bar height 76px
-    (header.top <= 76) ? this.setState({ stickyScroll: true }) : this.setState({ stickyScroll: false });
-  }
-
   render() {
     return (
       <Aux>
@@ -73,7 +76,6 @@ class Layout extends Component {
         <About ref={(section) => { this.About = section; }} />
         <WhatWeDo ref={(section) => { this.What = section; }} />
         <PortfolioSlider ref={(section) => { this.Portfolio = section; }} />
-
         <TwitterSlider ref={(section) => { this.Customers = section; }} />
         <Footer ref={(section) => { this.Contact = section; }} />
       </Aux>

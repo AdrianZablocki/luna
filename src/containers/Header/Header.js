@@ -19,7 +19,7 @@ class Header extends Component {
 
   render() {
     return (
-      <header className={classes.Header}>
+      <header className={classes.HeaderWrapper}>
         <Navigation 
           text="Menu" 
           transform={this.props.menu.openMenu} 

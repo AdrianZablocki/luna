@@ -1,11 +1,30 @@
-.TwitterWrapper {
-  background: #FFF;
-  padding: 160px 0 90px 0;
-}
-.SliderContainer {
+ .TwitterWrapper {
   overflow: hidden;
+  background: #FFF;
+  padding: 100px 0 50px 0;
 }
-
-.SliderWrapper {
+.CarouselContainer {
   position: relative;
+}
+.CarouselWrapper {
+  transform: translateX(-40%);
+}
+.Carousel {
+  display: flex;
+  box-sizing: border-box;
+  transition: all 300ms ease;
+}
+.SlideWrapper {
+  box-sizing: border-box;
+  transition: all 300ms ease;
+}
+@media(min-width: 500px) {
+  .TwitterWrapper {
+    padding: 120px 0 70px 0;
+  }
+} 
+@media(min-width: 992px) {
+  .TwitterWrapper {
+    padding: 160px 0 90px 0;
+  }
 }

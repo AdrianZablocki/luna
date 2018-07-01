@@ -1,10 +1,20 @@
 .TweetWrapper {
-  display: inline-block;
-  width: 832px;
-  padding: 55px;
+  position: relative;
+  top: 0;
+}
+.TweetWrapperActive {
+  position: relative;
+  top: -50px;
+}
+.TweetContainer {
+  margin: 0 2px;
+  padding: 0;
   box-sizing: border-box;
   text-align: center;
-  margin: 60px 30px;
+  box-shadow: 0px 15px 30px 0px rgba(64, 72, 90, 0.15);
+  transition: all 1600ms ease;
+}
+.TweetContainerActive {
   box-shadow: 0px 30px 60px 0px rgba(64, 72, 90, 0.15);
 }
 .Member,
@@ -12,8 +22,9 @@
 .MemberName,
 .MemberNick {
   font-family: 'Roboto', sans-serif;
-  font-size: 1.5rem;
-  line-height: 34px;
+  font-size: 0.75rem;
+  line-height: 16px;
+  padding: 5px;
 }
 .Member,
 .MemberNick {
@@ -26,14 +37,15 @@
 }
 .MemberName,
 .MemberNick  {
-  font-size: 1.125rem;
+  font-size: 0.75rem;
   font-weight: 400;
-  line-height: 32px;
+  line-height: 10px;
 }
 .SignWrapper {
   display: flex;
   justify-content: center;
-  margin-top: 45px;
+  /* margin-top: 10px; */
+  padding: 10px 0;
 }
 .MemberWrapper {
   padding: 0 15px;
@@ -41,7 +53,51 @@
 .Avatar {
   background: url('../../assets/images/avatar.jpg') center center no-repeat;
   background-size: cover;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
+}
+@media(min-width: 500px) {
+  .TweetContainer {
+    margin: 0px 10px;
+    padding: 15px;
+  }
+  .Member,
+  .Text,
+  .MemberName,
+  .MemberNick {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height: 22px;
+    padding: 0;
+  }
+  .MemberName,
+  .MemberNick  {
+    font-size: 1.125rem;
+    line-height: 32px;
+  }
+  .SignWrapper {
+    padding: 25px 0 0 0;
+  }
+  .Avatar {
+    width: 60px;
+    height: 60px;
+  }
+} 
+@media(min-width: 992px) {
+  .TweetContainer {
+    padding: 55px;
+    margin: 60px 30px;
+  }
+  .Member,
+  .Text,
+  .MemberName,
+  .MemberNick {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    line-height: 34px;
+  }
+  .SignWrapper {
+    padding: 45px 0 0 0;
+  }
 }
