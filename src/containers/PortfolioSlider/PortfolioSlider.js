@@ -69,13 +69,13 @@ class PortfolioSlider extends Component {
     activeIndex: 0
   }
 
-  goToSlide(index) {
+  goToSlideHandler = (index) => {
     this.setState({
       activeIndex: index
     });
   }
 
-  goToPrevSlide(e) {
+  goToPrevSlideHandler = (e) => {
     e.preventDefault();
 
     let index = this.state.activeIndex;
@@ -92,7 +92,7 @@ class PortfolioSlider extends Component {
     });
   }
 
-  goToNextSlide(e) {
+  goToNextSlideHandler = (e) => {
     e.preventDefault();
 
     let index = this.state.activeIndex;
@@ -139,7 +139,7 @@ class PortfolioSlider extends Component {
                 index={index}
                 activeIndex={this.state.activeIndex}
                 isActive={this.state.activeIndex === index}
-                onClick={e => this.goToSlide(index)}
+                onClick={() => this.goToSlideHandler(index)}
               >
                 <div className={classes.SliderButtonTxt}>
                   <span className={classes.SliderButtonDeco}>{slide.tab.tabTxt}</span>
@@ -166,8 +166,8 @@ class PortfolioSlider extends Component {
                 </ul>         
               </div>
             </div>
-            <CarouselLeftArrow onClick={e => this.goToPrevSlide(e)} />
-            <CarouselRightArrow onClick={e => this.goToNextSlide(e)} /> 
+            <CarouselLeftArrow onClick={(e) => this.goToPrevSlideHandler(e)} />
+            <CarouselRightArrow onClick={(e) => this.goToNextSlideHandler(e)} /> 
             <ul className={classes.SliderButtonWrapper}>
               {indicators}
             </ul>        

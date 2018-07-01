@@ -13,7 +13,7 @@ class TwitterSlider extends Component {
         text1: 'win Apple Design Award! Big thanks to ',
         followers: '@DigitalStudio',
         mark: '!',
-        text2: "They are aggressive in trying out new technologies and new design techniques. the best guys I've worked with.",
+        text2: "They are aggressive in trying out new technologies and new design techniques. The best guys I've worked with.",
         img: avatar,
         name: 'Frank Underwood',
         nick: '@PresidentFrank'
@@ -23,7 +23,7 @@ class TwitterSlider extends Component {
         text1: 'win Apple Design Award! Big thanks to ',
         followers: '@DigitalStudio',
         mark: '!',
-        text2: "They are aggressive in trying out new technologies and new design techniques. the best guys I've worked with.",
+        text2: "They are aggressive in trying out new technologies and new design techniques. The best guys I've worked with.",
         img: avatar,
         name: 'Frank Underwood',
         nick: '@PresidentFrank'
@@ -33,7 +33,7 @@ class TwitterSlider extends Component {
         text1: 'win Apple Design Award! Big thanks to ',
         followers: '@DigitalStudio',
         mark: '!',
-        text2: "They are aggressive in trying out new technologies and new design techniques. the best guys I've worked with.",
+        text2: "They are aggressive in trying out new technologies and new design techniques. The best guys I've worked with.",
         img: avatar,
         name: 'Frank Underwood',
         nick: '@PresidentFrank'
@@ -43,28 +43,28 @@ class TwitterSlider extends Component {
         text1: 'win Apple Design Award! Big thanks to ',
         followers: '@DigitalStudio',
         mark: '!',
-        text2: "They are aggressive in trying out new technologies and new design techniques. the best guys I've worked with.",
+        text2: "They are aggressive in trying out new technologies and new design techniques. The best guys I've worked with.",
         img: avatar,
         name: 'Frank Underwood',
         nick: '@PresidentFrank'
       },
       {
-        member: '@PaymeApp4 ',
+        member: '@PaymeApp5 ',
         text1: 'win Apple Design Award! Big thanks to ',
         followers: '@DigitalStudio',
         mark: '!',
-        text2: "They are aggressive in trying out new technologies and new design techniques. the best guys I've worked with.",
+        text2: "They are aggressive in trying out new technologies and new design techniques. The best guys I've worked with.",
         img: avatar,
         name: 'Frank Underwood',
         nick: '@PresidentFrank'
       }
       ,
       {
-        member: '@PaymeApp4 ',
+        member: '@PaymeApp6 ',
         text1: 'win Apple Design Award! Big thanks to ',
         followers: '@DigitalStudio',
         mark: '!',
-        text2: "They are aggressive in trying out new technologies and new design techniques. the best guys I've worked with.",
+        text2: "They are aggressive in trying out new technologies and new design techniques. The best guys I've worked with.",
         img: avatar,
         name: 'Frank Underwood',
         nick: '@PresidentFrank'
@@ -74,23 +74,19 @@ class TwitterSlider extends Component {
   }
   
   componentDidMount() {
-    setInterval(() => this.goToNextSlide(), 5000);
+    setInterval(() => this.goToNextSlideHandler(), 5000);
   }
 
-  goToNextSlide = () => {
+  goToNextSlideHandler = () => {
     let index = this.state.activeIndex;
-    let tweetsUpdated = [...this.state.tweets];
-    let [first, ...rest] = tweetsUpdated;
 
     if (index === this.state.tweets.length - 2) {
       index = -1;
     }
 
     index++;
-    tweetsUpdated = [...rest, first];
 
     this.setState({
-      tweets: tweetsUpdated,
       activeIndex: index
     });
   }

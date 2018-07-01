@@ -1,7 +1,7 @@
  .TwitterWrapper {
   overflow: hidden;
   background: #FFF;
-  padding: 100px 0 50px 0;
+  padding: 130px 0 50px 0;
 }
 .CarouselContainer {
   position: relative;
@@ -20,7 +20,7 @@
 }
 @media(min-width: 500px) {
   .TwitterWrapper {
-    padding: 120px 0 70px 0;
+    padding: 130px 0 70px 0;
   }
 } 
 @media(min-width: 992px) {

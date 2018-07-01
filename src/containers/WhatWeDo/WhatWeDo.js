@@ -21,7 +21,8 @@ class WhatWeDo extends Component {
         title: 'Web promote',
         text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum, mauris nec'
       }
-    ]
+    ],
+    buttonTxt: 'show more'
   }
 
   render() {
@@ -43,6 +44,7 @@ class WhatWeDo extends Component {
         </div>
         <div className={classes.PanelsContainer}>
           <div className={classes.PanelsWrapper}>{panels}</div>
+          <span>{this.state.buttonTxt}</span>
         </div>
       </section>
     );

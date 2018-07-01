@@ -3,7 +3,71 @@
   padding: 20px 15px;
   box-sizing: border-box;
 }
-
+.ContactWrapper {
+  display: block;
+  padding-bottom: 50px;
+}
+.ContactContent {
+  width: 100%;
+}
+.ContactButton {
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+.ContactText,
+.DesignInfoHeader {
+  font-family: 'Roboto', sans-serif; 
+}
+.ContactText {
+  color:  #CFD2FF;
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 28px;
+  text-align: left;
+  padding: 25px 0;
+}
+.DesignInfoWrapper {
+  border-top: 1px solid  rgba(255, 255, 255, 0.3);
+  padding-top: 10px;
+}
+.DesignInfoHeader {
+  color:  #FFF;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: left;
+  text-transform: uppercase;
+  padding: 10px 0;
+}
+.DesignInfoHeaderBlue {
+  color: #4CA9FF;
+}
+.DesignInfoHeart {
+  display: inline-block;
+  background-color: #4CA9FF;
+  height: 8px;
+  transform: rotate(-45deg);
+  width: 8px;
+  margin: 0 10px;
+  position: relative;
+  top: -1px;
+}
+.DesignInfoHeart:before,
+.DesignInfoHeart:after {
+  content: "";
+  background-color: #4CA9FF;
+  border-radius: 50%;
+  height: 8px;
+  position: absolute;
+  width: 8px;
+  top: 0px;
+  left: 4px;
+}
+.DesignInfoHeart:before {
+  top: -4px;
+  left: 0;
+}
 @media(min-width: 768px) {
   .FooterWrapper {
     background: url('../../assets/images/portfolio_bg.jpg') center center no-repeat;
@@ -13,6 +77,23 @@
     width: 720px;
     margin: 0 auto;
     padding: 100px 0;
+  }
+  .ContactContent {
+    width: 60%;
+  }
+  .ContactButton {
+    width: 40%;
+    text-align: right;
+    align-self: flex-end;
+    padding-bottom: 25px;
+  }
+  .ContactWrapper {
+    display: flex;
+    padding-bottom: 95px;
+  }
+  .DesignInfoWrapper {
+    display: flex;
+    justify-content: space-between;
   }
 }
 @media(min-width: 992px) {
